@@ -7,8 +7,9 @@
 #include <iostream>
 #include <utility>
 #include <boost/shared_ptr.hpp>
-#include "boost/filesystem/operations.hpp"
+#include <boost/filesystem/operations.hpp>
 #include <time.h>
+#include <stdlib.h>
 
 #define TYPE(x) #x
 #define DEBUG(x) std::cerr << #x << " = " << (x) << " (L" << __LINE__ << ")" << " " << __FILE__ << std::endl;
@@ -141,5 +142,8 @@ class Cpposxom {
 };
 
 int main (int argc, char *argv[]) {
+//	char* path_info = getenv("PATH_INFO");
+//	string env = path_info == NULL ? string() : string(path_info);
+//	DEBUG(env);
 	Cpposxom("data").run();
 }
