@@ -1,8 +1,8 @@
-all: cpposxom
+all: cpposxom.cgi
 
-cpposxom: cpposxom.cpp
-	g++ -I/usr/include -lboost_filesystem cpposxom.cpp -o cpposxom
+cpposxom.cgi: cpposxom.cpp
+	g++ -I/usr/include -lboost_filesystem cpposxom.cpp -o cpposxom.cgi
 
 clean:
-	rm cpposxom
+	rm cpposxom.cgi
 
